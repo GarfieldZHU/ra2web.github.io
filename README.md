@@ -17,3 +17,14 @@
 
 - 静态站点，GitHub Pages 托管，无服务端
 - 游戏资源通过 `config.ini` 中的 CDN 地址在运行时拉取，首次加载后由浏览器缓存
+
+## 开屏图来源
+
+`res/custom/splash.png` 为游戏原始素材，可直接追溯复现：
+
+1. 下载 `config.ini` 中 `gameResArchiveUrl` 指向的完整资源包（`full-pack.7z`）
+2. 从中取出 `RA2.MIX`
+3. 在 `RA2.MIX` 内按 PCX 文件头（`0A 05 01 08`）定位，取 `856×736` 那张官方标题美术
+4. 原始像素直接转 PNG
+
+无 inpaint、无裁切、无缩放、无重绘，仅做了一次无损 PNG 重压缩。
