@@ -62,7 +62,8 @@ html:-moz-full-screen body {
     width: 100%;
     height: 100%;
     z-index: 10000;
-    background: url(res/img/cd-logo.png) no-repeat center center;
+    background: #120806 url(res/custom/splash.png) no-repeat center center;
+    background-size: contain;
 }
 
 #loader {
@@ -127,6 +128,25 @@ html:-moz-full-screen body {
 #ra2web-root .video-wrapper video {
     width: 632px;
     height: 570px;
+}
+
+/* 个人自部署：开场改用游戏原画，隐藏上游宣传视频 */
+#ra2web-root .video-wrapper {
+    position: relative;
+    background-color: #000;
+    background-image: url(res/custom/splash.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+#ra2web-root .video-wrapper video {
+    display: none !important;
+}
+
+#ra2web-root .video-wrapper .logo {
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
 
 #ra2web-root .video-wrapper .logo {

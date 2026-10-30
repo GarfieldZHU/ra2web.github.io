@@ -6,15 +6,15 @@
     <meta name="theme-color" content="#000000" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="王二火大" />
-    <title>王二火大-联机对战平台</title>
+    <meta name="apple-mobile-web-app-title" content="红色警戒2" />
+    <title>红色警戒2 · 网页版</title>
     <meta
       name="keywords"
-      content="王二火大, 红色警戒下载, 如何玩红警, webra2, 苹果如何玩红警, 平板上如何玩红警, 手机上如何玩红警, win7如何玩红警, win10如何玩红警, win11如何玩红警, 红警, 红警2, 红色警戒2, 在线游戏, 游戏平台，对战平台，战网, 红色警戒3, 红警3, RA2, RA2WEB"
+      content="红警, 红警2, 红色警戒2, 在线游戏, 网页游戏, 即时战略, RA2, RA2WEB"
     />
     <meta
       name="description"
-      content="王二火大支持在网页上游玩经典的红色井界游戏，无需下载安装，随时随地在手机、电脑、平板甚至手表上畅玩。提供多种游戏模式和地图，与全球玩家实时对战。"
+      content="在网页上直接游玩经典的红色警戒2，无需下载安装，支持电脑与移动设备。"
     />
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./favicon.ico" />
@@ -36,8 +36,8 @@
         alert('Browser not supported.\n\nPlease download the latest Google Chrome, Mozilla Firefox or Microsoft Edge.');
       }
     </script>
-    <link href="./res/fonts/fonts.css?v=0.85.0-r2e3b64c-d489299c2" rel="stylesheet" />
-    <link rel="stylesheet" href="./style.css?v=0.85.0-r2e3b64c-d489299c2" type="text/css" />
+    <link href="./res/fonts/fonts.css?v=0.85.0-r2e3b64c-custom2" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css?v=0.85.0-r2e3b64c-custom2" type="text/css" />
     <style>
       #ra2web-root {
         position: relative;
@@ -183,9 +183,9 @@
     <script>
       window.__ra2webTransportMode = 'websocket-only';
     </script>
-    <script type="module" crossorigin src="./js/app.js?v=0.85.0-r2e3b64c-d489299c2"></script>
-    <link rel="modulepreload" crossorigin href="./js/vendor.js?v=0.85.0-r2e3b64c-d489299c2">
-    <link rel="modulepreload" crossorigin href="./js/7zz.js?v=0.85.0-r2e3b64c-d489299c2">
+    <script type="module" crossorigin src="./js/app.js?v=0.85.0-r2e3b64c-custom2"></script>
+    <link rel="modulepreload" crossorigin href="./js/vendor.js?v=0.85.0-r2e3b64c-custom2">
+    <link rel="modulepreload" crossorigin href="./js/7zz.js?v=0.85.0-r2e3b64c-custom2">
   </head>
   <body class="no-js">
     <div id="ra2web-root">
@@ -209,7 +209,7 @@
               正在检测客户端配置、界面资源和游戏资源清单。
             </p>
             <div class="startup-load-check-progress-meta">
-              <span>加载版本：<strong id="startup-load-check-version">0.85.0-r2e3b64c-d489299c2</strong></span>
+              <span>加载版本：<strong id="startup-load-check-version">0.85.0-r2e3b64c-custom2</strong></span>
               <span>启动进度</span>
             </div>
             <div
@@ -224,11 +224,6 @@
               <div id="startup-load-check-progress-bar" class="startup-load-check-progress-bar"></div>
             </div>
             <p class="startup-load-check-hint">如果页面长时间停留在这里，可以重新加载后再试。</p>
-            <p class="startup-load-check-feedback">
-              遇到问题，可访问
-              <a href="https://feedback.ra2web.com" target="_blank" rel="noopener noreferrer">feedback.ra2web.com</a>
-              反馈问题。
-            </p>
           </div>
           <div class="message-box-footer">
             <button
