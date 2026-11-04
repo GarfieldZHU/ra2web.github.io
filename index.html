@@ -184,6 +184,19 @@
     <script>
       window.__ra2webTransportMode = 'websocket-only';
     </script>
+    <script>
+      // 一次性迁移：旧版 config.ini 把「非全屏渲染分辨率上限」写成 1024x768，
+      // 引擎首次启动会把这个值存进 localStorage 并一直沿用，于是改大 config.viewport
+      // 之后老玩家仍然被钉在 1024x768。这里清一次选项，让引擎重新取新的默认值。
+      (function () {
+        try {
+          var FLAG = '_ra2_hires_migrated_v1';
+          if (localStorage.getItem(FLAG)) return;
+          localStorage.removeItem('_r_opts_v3');
+          localStorage.setItem(FLAG, '1');
+        } catch (e) {}
+      })();
+    </script>
     <script type="module" crossorigin src="./js/app.js?v=0.85.0-r2e3b64c-custom5"></script>
     <link rel="modulepreload" crossorigin href="./js/vendor.js?v=0.85.0-r2e3b64c-custom5">
     <link rel="modulepreload" crossorigin href="./js/7zz.js?v=0.85.0-r2e3b64c-custom5">
