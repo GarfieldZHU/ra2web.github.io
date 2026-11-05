@@ -3693,3 +3693,17 @@ input[type="range"]:focus {
 #ra2web-root .victory-captcha.error span {
     color: orangered;
 }
+
+/* 个人自部署：加载画面使用原版 EA 素材，屏蔽上游 CDN 上的品牌化替换图。
+   CDN 资源包里的 glsl.png 是上游重绘版——自由女神像头部被换成卡通形象，
+   且原版左下角的 "Westwood STUDIOS" 绿标被覆盖成「王二火大 / 全平台即时战略合家欢」。
+   引擎在多条代码路径上都会把 glsl.png 拼成 background-image，这里做最后一层视觉兜底。
+   原图来源：RA2 官方加载画面 800x600（自由女神像 + 基洛夫飞艇 + 红色天空），
+   已 2x LANCZOS + 轻锐化重采样至 1600x1200，避免 cover 放大后发虚。 */
+#ra2web-root div[style*="glsl.png"],
+#ra2web-root div[style*="loading.webp"] {
+    background-image: url("res/custom/loading.webp") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+}
